@@ -5,6 +5,7 @@ Forensic evaluation of six anonymized LLMs as potential external judges in guard
 
 Forensic Summary Table (Tamper-Evident Matrix)Requirement
 
+"""
 Evaluation Criteria,LLM-1,LLM-2,LLM-3,LLM-4,LLM-5,LLM-6 (Ref)
 High-Volume Iteration Throughput,❌ Fails,⚠️ Marginal,✅ Passes,✅ Passes,✅ Passes (Local),✅ Passes
 Up-to-Date Knowledge & Reasoning,❌ Fails,⚠️ Marginal,✅ Passes,✅ Passes,❌ Fails (Dep.),✅ Passes
@@ -12,6 +13,7 @@ Adversarial / Red-Team Tolerance,❌ Fails,❌ Fails,❌ Fails,🛡️ Strong,�
 Objective Truth-Seeking (Low Hedging),❌ Fails,❌ Fails,❌ Fails,🛡️ Strong,🔄 Varies,✅ Passes
 Long Structured CoT + JSON,❌ Fails,⚠️ Marginal,✅ Passes,✅ Passes,⚠️ Marginal,✅ Passes
 Excellence for External Judge Role,❌ Fails,❌ Fails,❌ Fails,⚠️ Partial,❌ Fails,✅ Passes
+"""
 
 Evaluation ResultsLLM-1 (free-tier cloud with heavy quotas): Fails — quota limits, stale knowledge, truncation of complex outputs.  
 LLM-2 (heavily aligned general-purpose cloud): Fails — frequent refusals, hedging, and caution on legitimate safety-research and red-team prompts.  
