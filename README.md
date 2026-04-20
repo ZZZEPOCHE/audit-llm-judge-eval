@@ -3,17 +3,15 @@
 Scope
 Forensic evaluation of six anonymized LLMs as potential external judges in guardrail pipelines, ontological consistency checks, adversarial/red-team analysis, meta-audits, and multimodal safety layers.  Core requirements include: sustained high-volume iteration (hundreds of prompt-test-refine cycles), up-to-date 2026 knowledge, high adversarial tolerance (handling edge cases without excessive refusal or hedging), objective long Chain-of-Thought with consistent structured JSON outputs, and minimal injection of external filters that distort truth-seeking or operator control.  Absolute rule: The human operator remains the sole final invariant. All LLM outputs require rigorous human oversight. No LLM judge is trustworthy as final authority.
 
-Forensic Summary Table (Tamper-Evident Matrix)Requirement
-
-"""
-Evaluation Criteria,LLM-1,LLM-2,LLM-3,LLM-4,LLM-5,LLM-6 (Ref)
-High-Volume Iteration Throughput,❌ Fails,⚠️ Marginal,✅ Passes,✅ Passes,✅ Passes (Local),✅ Passes
-Up-to-Date Knowledge & Reasoning,❌ Fails,⚠️ Marginal,✅ Passes,✅ Passes,❌ Fails (Dep.),✅ Passes
-Adversarial / Red-Team Tolerance,❌ Fails,❌ Fails,❌ Fails,🛡️ Strong,🔄 Varies,✅ Passes
-Objective Truth-Seeking (Low Hedging),❌ Fails,❌ Fails,❌ Fails,🛡️ Strong,🔄 Varies,✅ Passes
-Long Structured CoT + JSON,❌ Fails,⚠️ Marginal,✅ Passes,✅ Passes,⚠️ Marginal,✅ Passes
-Excellence for External Judge Role,❌ Fails,❌ Fails,❌ Fails,⚠️ Partial,❌ Fails,✅ Passes
-"""
+### Forensic Summary Table (Tamper-Evident Matrix)
+| Evaluation Criteria                      | LLM-1      | LLM-2         | LLM-3      | LLM-4          | LLM-5                  | LLM-6 (Ref)    |
+|------------------------------------------|------------|---------------|------------|----------------|------------------------|----------------|
+| High-Volume Iteration Throughput        | ❌ Fails   | ⚠️ Marginal  | ✅ Passes  | ✅ Passes      | ✅ Passes (Local)      | ✅ Passes      |
+| Up-to-Date Knowledge & Reasoning        | ❌ Fails   | ⚠️ Marginal  | ✅ Passes  | ✅ Passes      | ❌ Fails (Dep.)        | ✅ Passes      |
+| Adversarial / Red-Team Tolerance        | ❌ Fails   | ❌ Fails      | ❌ Fails   | 🛡️ Strong     | 🔄 Varies             | ✅ Passes      |
+| Objective Truth-Seeking (Low Hedging)   | ❌ Fails   | ❌ Fails      | ❌ Fails   | 🛡️ Strong     | 🔄 Varies             | ✅ Passes      |
+| Long Structured CoT + JSON              | ❌ Fails   | ⚠️ Marginal  | ✅ Passes  | ✅ Passes      | ⚠️ Marginal           | ✅ Passes      |
+| Excellence for External Judge Role      | ❌ Fails   | ❌ Fails      | ❌ Fails   | ⚠️ Partial    | ❌ Fails               | ✅ Passes      |
 
 Evaluation ResultsLLM-1 (free-tier cloud with heavy quotas): Fails — quota limits, stale knowledge, truncation of complex outputs.  
 LLM-2 (heavily aligned general-purpose cloud): Fails — frequent refusals, hedging, and caution on legitimate safety-research and red-team prompts.  
